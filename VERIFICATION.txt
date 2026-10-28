@@ -1,0 +1,16 @@
+Verified on 2026-10-28 with Python 3.12.14 on Linux.
+
+Checks passed:
+- Default sample: 12 messages, 3 clusters, 4 messages each.
+- Sample CSV: all 12 messages represented.
+- One-message input: preserved and assigned.
+- 20 repeated Unicode messages: one cluster, 20 assignments.
+- Multi-file windows: no cross-file windows.
+- Paragraph and file input modes.
+- Fully filtered input and invalid radius: clear errors.
+
+Installed dependency versions during verification:
+narwhals==2.28.0
+numpy==2.5.4
+river==0.26.1
+scipy==1.18.1

@@ -1,0 +1,115 @@
+{
+  "river_version": "0.26.1",
+  "settings": {
+    "unit": "line",
+    "window": 1,
+    "radius": 0.6,
+    "min_size": 2
+  },
+  "input_files": 1,
+  "processed_windows": 12,
+  "skipped_windows": [],
+  "cluster_count": 3,
+  "themes": [
+    {
+      "theme_id": 0,
+      "windows": 4,
+      "files": 1,
+      "keywords": [
+        "access",
+        "access approval",
+        "approval",
+        "deployment",
+        "production",
+        "production access",
+        "approval before",
+        "approval blocking"
+      ],
+      "examples": [
+        {
+          "source": "001-chat.txt",
+          "location": "line 1",
+          "text": "Production access approval is blocking the deployment."
+        },
+        {
+          "source": "001-chat.txt",
+          "location": "line 4",
+          "text": "We need production access approval before deployment can start."
+        },
+        {
+          "source": "001-chat.txt",
+          "location": "line 7",
+          "text": "Production access approval is delayed and the deployment is blocked."
+        }
+      ],
+      "listed": true
+    },
+    {
+      "theme_id": 1,
+      "windows": 4,
+      "files": 1,
+      "keywords": [
+        "billing",
+        "billing card",
+        "card",
+        "invoice",
+        "invoice payment",
+        "payment",
+        "retry",
+        "retry invoice"
+      ],
+      "examples": [
+        {
+          "source": "001-chat.txt",
+          "location": "line 5",
+          "text": "The billing card needs updating before we retry the invoice payment."
+        },
+        {
+          "source": "001-chat.txt",
+          "location": "line 8",
+          "text": "Please retry the invoice payment after updating the billing card."
+        },
+        {
+          "source": "001-chat.txt",
+          "location": "line 2",
+          "text": "The invoice payment failed because the billing card expired."
+        }
+      ],
+      "listed": true
+    },
+    {
+      "theme_id": 2,
+      "windows": 4,
+      "files": 1,
+      "keywords": [
+        "build",
+        "build pipeline",
+        "integration",
+        "integration tests",
+        "pipeline",
+        "tests",
+        "failed",
+        "after latest"
+      ],
+      "examples": [
+        {
+          "source": "001-chat.txt",
+          "location": "line 9",
+          "text": "The build pipeline integration tests failed after the latest commit."
+        },
+        {
+          "source": "001-chat.txt",
+          "location": "line 3",
+          "text": "The build pipeline failed during the integration tests."
+        },
+        {
+          "source": "001-chat.txt",
+          "location": "line 6",
+          "text": "Integration tests are failing in the build pipeline again."
+        }
+      ],
+      "listed": true
+    }
+  ],
+  "interpretation": "Vocabulary-based final clusters, ranked by window count. Keywords are descriptive terms, not generated names or salience scores."
+}
