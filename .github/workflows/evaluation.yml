@@ -1,0 +1,32 @@
+name: Contextual evaluation
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-eval.lock
+      - run: python -m pip install -r requirements-eval.lock
+      - run: python -m unittest evaluation.test_evaluation -v
+      - run: python -m evaluation.run --out evaluation/runs/ci
+      - name: Check recorded baseline metrics and assignments
+        run: |
+          diff -u evaluation/baseline/predictions.json evaluation/runs/ci/predictions.json
+          diff -u evaluation/baseline/metrics.json evaluation/runs/ci/metrics.json
+          diff -u evaluation/baseline/report.md evaluation/runs/ci/report.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: contextual-evaluation
+          path: evaluation/runs/ci

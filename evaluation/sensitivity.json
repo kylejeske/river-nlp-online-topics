@@ -1,0 +1,296 @@
+{
+  "runs": [
+    {
+      "aggregate": {
+        "checkpoint_state_accuracy": 0.0,
+        "checkpoint_state_coverage": 0.0,
+        "current_issue_state_accuracy": 0.0,
+        "current_issue_state_coverage": 0.0,
+        "episode_pair_f1_macro": 0.0,
+        "final_state_accuracy": 0.0,
+        "final_state_coverage": 0.0,
+        "important_singletons": 2,
+        "ndcg_at_3_macro": 0.6938365971163692,
+        "nonzero_relevance_checkpoints": 13,
+        "probes": {
+          "ambiguous_reference": {
+            "passed": 2,
+            "total": 2
+          },
+          "emergence": {
+            "passed": 0,
+            "total": 1
+          },
+          "lexical_collision": {
+            "passed": 1,
+            "total": 3
+          },
+          "negation": {
+            "passed": 1,
+            "total": 1
+          },
+          "paraphrase": {
+            "passed": 0,
+            "total": 4
+          },
+          "recurrence": {
+            "passed": 1,
+            "total": 5
+          },
+          "reference": {
+            "passed": 3,
+            "total": 7
+          },
+          "reopening": {
+            "passed": 0,
+            "total": 1
+          },
+          "singleton": {
+            "passed": 1,
+            "total": 1
+          },
+          "state_change": {
+            "passed": 0,
+            "total": 7
+          },
+          "state_continuity": {
+            "passed": 2,
+            "total": 2
+          }
+        },
+        "singleton_hits_at_1": 0,
+        "theme_pair_f1_macro": 0.5922619047619048
+      },
+      "manifest": {
+        "adapter_command": null,
+        "baseline_lock": {
+          "commit": "7f8691d846cbd102e5a5ad5d279a96fcbca6e1c6",
+          "sha256": {
+            "VERIFICATION.txt": "0e339345d7dae70e8e43d34b7063fb69b8644adac1fce869866dbe6beffc9eba",
+            "find_themes.py": "5ea2e11da09f0eb875ac141a0f73105dbf309e3e0879b569bca226bc92d0fb86",
+            "requirements.txt": "b8482b9c807d268c7d35170e135f7ccdc02d925b58e811c36e319510af8745bf",
+            "sample-data/001-chat.txt": "9d69237c7c51e2ae5031e99786ef9a04c4494fe9dc62081e09d06a7612c03d26",
+            "sample-results/assignments.csv": "841ce85cc483f246bac79f4f5822f4a0321c758cb9432d0d830f4e1225f82935",
+            "sample-results/themes.json": "44d0bdb71f0ed579038dc297706616fc5c8125da6322ed913de6e42d412a53fb"
+          }
+        },
+        "causality": "fresh_process_per_prefix_no_future_messages",
+        "evaluator_sha256": {
+          "evaluation/metrics.py": "87bfdf8c4482ae30d7498c2d72acc423078b29bc7170194c73229b6e37bb18d5",
+          "evaluation/run.py": "ea41c3e6b8d4ffc2074f77bf912b0007d0d48bbbaa989d0ad9a2f80cc718dee1"
+        },
+        "packages": {
+          "narwhals": "2.28.0",
+          "numpy": "2.5.4",
+          "river": "0.26.1",
+          "scipy": "1.18.1"
+        },
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "radius": 0.45,
+        "ranking_policy": "descending score; ties by first assigned input message",
+        "state_support": "null = unsupported, unknown = explicit uncertainty",
+        "suite_id": "contextual-themes-v1",
+        "suite_sha256": "39a0640c4d7f097ed5d948d6416699ab149a28bf2727fd0e0f0c9046a1da391a"
+      },
+      "metrics_sha256": "2fa18724aa390a9613bc42f3ebe4da80ce3180109f3f1a396ee44c4e32dc682b",
+      "predictions_sha256": "bab636c10222946468cfb441beab74b5522c841be6cf6969acd5c1160f075936",
+      "radius": 0.45
+    },
+    {
+      "aggregate": {
+        "checkpoint_state_accuracy": 0.0,
+        "checkpoint_state_coverage": 0.0,
+        "current_issue_state_accuracy": 0.0,
+        "current_issue_state_coverage": 0.0,
+        "episode_pair_f1_macro": 0.0,
+        "final_state_accuracy": 0.0,
+        "final_state_coverage": 0.0,
+        "important_singletons": 2,
+        "ndcg_at_3_macro": 0.6938365971163692,
+        "nonzero_relevance_checkpoints": 13,
+        "probes": {
+          "ambiguous_reference": {
+            "passed": 2,
+            "total": 2
+          },
+          "emergence": {
+            "passed": 0,
+            "total": 1
+          },
+          "lexical_collision": {
+            "passed": 1,
+            "total": 3
+          },
+          "negation": {
+            "passed": 1,
+            "total": 1
+          },
+          "paraphrase": {
+            "passed": 0,
+            "total": 4
+          },
+          "recurrence": {
+            "passed": 1,
+            "total": 5
+          },
+          "reference": {
+            "passed": 3,
+            "total": 7
+          },
+          "reopening": {
+            "passed": 0,
+            "total": 1
+          },
+          "singleton": {
+            "passed": 1,
+            "total": 1
+          },
+          "state_change": {
+            "passed": 0,
+            "total": 7
+          },
+          "state_continuity": {
+            "passed": 2,
+            "total": 2
+          }
+        },
+        "singleton_hits_at_1": 0,
+        "theme_pair_f1_macro": 0.6339285714285714
+      },
+      "manifest": {
+        "adapter_command": null,
+        "baseline_lock": {
+          "commit": "7f8691d846cbd102e5a5ad5d279a96fcbca6e1c6",
+          "sha256": {
+            "VERIFICATION.txt": "0e339345d7dae70e8e43d34b7063fb69b8644adac1fce869866dbe6beffc9eba",
+            "find_themes.py": "5ea2e11da09f0eb875ac141a0f73105dbf309e3e0879b569bca226bc92d0fb86",
+            "requirements.txt": "b8482b9c807d268c7d35170e135f7ccdc02d925b58e811c36e319510af8745bf",
+            "sample-data/001-chat.txt": "9d69237c7c51e2ae5031e99786ef9a04c4494fe9dc62081e09d06a7612c03d26",
+            "sample-results/assignments.csv": "841ce85cc483f246bac79f4f5822f4a0321c758cb9432d0d830f4e1225f82935",
+            "sample-results/themes.json": "44d0bdb71f0ed579038dc297706616fc5c8125da6322ed913de6e42d412a53fb"
+          }
+        },
+        "causality": "fresh_process_per_prefix_no_future_messages",
+        "evaluator_sha256": {
+          "evaluation/metrics.py": "87bfdf8c4482ae30d7498c2d72acc423078b29bc7170194c73229b6e37bb18d5",
+          "evaluation/run.py": "ea41c3e6b8d4ffc2074f77bf912b0007d0d48bbbaa989d0ad9a2f80cc718dee1"
+        },
+        "packages": {
+          "narwhals": "2.28.0",
+          "numpy": "2.5.4",
+          "river": "0.26.1",
+          "scipy": "1.18.1"
+        },
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "radius": 0.6,
+        "ranking_policy": "descending score; ties by first assigned input message",
+        "state_support": "null = unsupported, unknown = explicit uncertainty",
+        "suite_id": "contextual-themes-v1",
+        "suite_sha256": "39a0640c4d7f097ed5d948d6416699ab149a28bf2727fd0e0f0c9046a1da391a"
+      },
+      "metrics_sha256": "67eea866b9f217da34ff112544f11a5a2f093f49f449d148b0942f28a60d3e9e",
+      "predictions_sha256": "3838b61f73690c959da2e8bc6bec22c8b6d0945ccc566886616c67d782217f55",
+      "radius": 0.6
+    },
+    {
+      "aggregate": {
+        "checkpoint_state_accuracy": 0.0,
+        "checkpoint_state_coverage": 0.0,
+        "current_issue_state_accuracy": 0.0,
+        "current_issue_state_coverage": 0.0,
+        "episode_pair_f1_macro": 0.0,
+        "final_state_accuracy": 0.0,
+        "final_state_coverage": 0.0,
+        "important_singletons": 2,
+        "ndcg_at_3_macro": 0.6664740529781448,
+        "nonzero_relevance_checkpoints": 13,
+        "probes": {
+          "ambiguous_reference": {
+            "passed": 2,
+            "total": 2
+          },
+          "emergence": {
+            "passed": 0,
+            "total": 1
+          },
+          "lexical_collision": {
+            "passed": 1,
+            "total": 3
+          },
+          "negation": {
+            "passed": 1,
+            "total": 1
+          },
+          "paraphrase": {
+            "passed": 0,
+            "total": 4
+          },
+          "recurrence": {
+            "passed": 1,
+            "total": 5
+          },
+          "reference": {
+            "passed": 3,
+            "total": 7
+          },
+          "reopening": {
+            "passed": 0,
+            "total": 1
+          },
+          "singleton": {
+            "passed": 1,
+            "total": 1
+          },
+          "state_change": {
+            "passed": 0,
+            "total": 7
+          },
+          "state_continuity": {
+            "passed": 2,
+            "total": 2
+          }
+        },
+        "singleton_hits_at_1": 0,
+        "theme_pair_f1_macro": 0.6651785714285714
+      },
+      "manifest": {
+        "adapter_command": null,
+        "baseline_lock": {
+          "commit": "7f8691d846cbd102e5a5ad5d279a96fcbca6e1c6",
+          "sha256": {
+            "VERIFICATION.txt": "0e339345d7dae70e8e43d34b7063fb69b8644adac1fce869866dbe6beffc9eba",
+            "find_themes.py": "5ea2e11da09f0eb875ac141a0f73105dbf309e3e0879b569bca226bc92d0fb86",
+            "requirements.txt": "b8482b9c807d268c7d35170e135f7ccdc02d925b58e811c36e319510af8745bf",
+            "sample-data/001-chat.txt": "9d69237c7c51e2ae5031e99786ef9a04c4494fe9dc62081e09d06a7612c03d26",
+            "sample-results/assignments.csv": "841ce85cc483f246bac79f4f5822f4a0321c758cb9432d0d830f4e1225f82935",
+            "sample-results/themes.json": "44d0bdb71f0ed579038dc297706616fc5c8125da6322ed913de6e42d412a53fb"
+          }
+        },
+        "causality": "fresh_process_per_prefix_no_future_messages",
+        "evaluator_sha256": {
+          "evaluation/metrics.py": "87bfdf8c4482ae30d7498c2d72acc423078b29bc7170194c73229b6e37bb18d5",
+          "evaluation/run.py": "ea41c3e6b8d4ffc2074f77bf912b0007d0d48bbbaa989d0ad9a2f80cc718dee1"
+        },
+        "packages": {
+          "narwhals": "2.28.0",
+          "numpy": "2.5.4",
+          "river": "0.26.1",
+          "scipy": "1.18.1"
+        },
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "radius": 0.7,
+        "ranking_policy": "descending score; ties by first assigned input message",
+        "state_support": "null = unsupported, unknown = explicit uncertainty",
+        "suite_id": "contextual-themes-v1",
+        "suite_sha256": "39a0640c4d7f097ed5d948d6416699ab149a28bf2727fd0e0f0c9046a1da391a"
+      },
+      "metrics_sha256": "8e68900364e18401b5a52ef4ac2c9ba270948b0052ecd4b216815d4b2d215927",
+      "predictions_sha256": "1b43e69955e84041ca504895ac7e58e966e6590ebfc82606aabb59161d2326ff",
+      "radius": 0.7
+    }
+  ],
+  "scope": "same development suite; not a held-out optimization"
+}

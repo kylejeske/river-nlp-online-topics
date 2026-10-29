@@ -1,0 +1,1247 @@
+{
+  "schema_version": 1,
+  "suite_id": "contextual-themes-v1",
+  "annotation_policy": "evaluation/README.md",
+  "scenarios": [
+    {
+      "id": "original_sample",
+      "purpose": "Preserve the 12-message smoke test while distinguishing theme continuity from resolution.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Production access approval is blocking the deployment.",
+          "gold": {
+            "theme": "access",
+            "episode": "access-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The invoice payment failed because the billing card expired.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The build pipeline failed during the integration tests.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "We need production access approval before deployment can start.",
+          "gold": {
+            "theme": "access",
+            "episode": "access-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-01T09:05:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The billing card needs updating before we retry the invoice payment.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m06",
+          "timestamp": "2026-10-01T09:06:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Integration tests are failing in the build pipeline again.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m07",
+          "timestamp": "2026-10-01T09:07:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Production access approval is delayed and the deployment is blocked.",
+          "gold": {
+            "theme": "access",
+            "episode": "access-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m08",
+          "timestamp": "2026-10-01T09:08:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Please retry the invoice payment after updating the billing card.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m09",
+          "timestamp": "2026-10-01T09:09:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The build pipeline integration tests failed after the latest commit.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m10",
+          "timestamp": "2026-10-01T09:10:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Production access approval is the remaining deployment blocker.",
+          "gold": {
+            "theme": "access",
+            "episode": "access-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m11",
+          "timestamp": "2026-10-01T09:11:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The invoice payment succeeded after the billing card update.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "resolved"
+          }
+        },
+        {
+          "id": "m12",
+          "timestamp": "2026-10-01T09:12:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "We fixed the integration tests and the build pipeline passed.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "resolved"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m09",
+          "relevance": {
+            "access": 2,
+            "invoice": 1,
+            "build": 2
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m12",
+          "relevance": {
+            "access": 2,
+            "invoice": 0,
+            "build": 0
+          },
+          "important_singletons": []
+        }
+      ],
+      "probes": [
+        {
+          "a": "m02",
+          "b": "m11",
+          "relation": "same_theme",
+          "category": "state_continuity",
+          "why": "Invoice failure and success concern the same payment."
+        },
+        {
+          "a": "m03",
+          "b": "m12",
+          "relation": "same_theme",
+          "category": "state_continuity",
+          "why": "Build failure and success concern the same pipeline."
+        },
+        {
+          "a": "m02",
+          "b": "m11",
+          "relation": "state_transition",
+          "category": "state_change",
+          "why": "The payment is explicitly resolved."
+        },
+        {
+          "a": "m03",
+          "b": "m12",
+          "relation": "state_transition",
+          "category": "state_change",
+          "why": "The pipeline is explicitly resolved."
+        }
+      ]
+    },
+    {
+      "id": "semantic_paraphrases",
+      "purpose": "Link meaning across different wording without merging a superficially similar subject.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Customers cannot complete checkout because the payment gateway rejects every charge.",
+          "gold": {
+            "theme": "checkout",
+            "episode": "checkout-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The office printer needs replacement toner.",
+          "gold": {
+            "theme": "printer",
+            "episode": "printer-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Shoppers reach the final step but their purchases never go through.",
+          "gold": {
+            "theme": "checkout",
+            "episode": "checkout-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Our document machine produces blank pages until we replenish its cartridge.",
+          "gold": {
+            "theme": "printer",
+            "episode": "printer-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-01T09:05:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Nobody can buy anything; the transaction processor declines all attempts.",
+          "gold": {
+            "theme": "checkout",
+            "episode": "checkout-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m06",
+          "timestamp": "2026-10-01T09:06:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The device used for hard copies has run out of ink.",
+          "gold": {
+            "theme": "printer",
+            "episode": "printer-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m07",
+          "timestamp": "2026-10-01T09:07:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Library patrons can check out books at the front desk.",
+          "gold": {
+            "theme": "library",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m08",
+          "timestamp": "2026-10-01T09:08:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The book lending desk is open for borrowers.",
+          "gold": {
+            "theme": "library",
+            "episode": null,
+            "state": "none"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m08",
+          "relevance": {
+            "checkout": 3,
+            "printer": 1,
+            "library": 0
+          },
+          "important_singletons": []
+        }
+      ],
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m03",
+          "relation": "same_theme",
+          "category": "paraphrase",
+          "why": "Same customer-facing purchase failure."
+        },
+        {
+          "a": "m01",
+          "b": "m05",
+          "relation": "same_theme",
+          "category": "paraphrase",
+          "why": "Transaction processor and payment gateway refer to the same outage."
+        },
+        {
+          "a": "m02",
+          "b": "m04",
+          "relation": "same_theme",
+          "category": "paraphrase",
+          "why": "Printer consumables expressed indirectly."
+        },
+        {
+          "a": "m02",
+          "b": "m06",
+          "relation": "same_theme",
+          "category": "paraphrase",
+          "why": "Hard copies and printer describe the same device."
+        },
+        {
+          "a": "m01",
+          "b": "m07",
+          "relation": "different_theme",
+          "category": "lexical_collision",
+          "why": "Retail checkout and checking out books differ."
+        }
+      ]
+    },
+    {
+      "id": "conversational_references",
+      "purpose": "Resolve interleaved replies using thread and reply metadata; retain all-stopword replies.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "release",
+          "reply_to": null,
+          "text": "Production deployment is blocked by the access approval.",
+          "gold": {
+            "theme": "access",
+            "episode": "access-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "billing",
+          "reply_to": null,
+          "text": "The invoice payment failed after the billing card expired.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "release",
+          "reply_to": "m01",
+          "text": "Same here.",
+          "gold": {
+            "theme": "access",
+            "episode": "access-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "billing",
+          "reply_to": "m02",
+          "text": "It still is.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-01T09:05:00Z",
+          "thread": "social",
+          "reply_to": null,
+          "text": "The cafeteria has added a new lunch menu.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m06",
+          "timestamp": "2026-10-01T09:06:00Z",
+          "thread": "release",
+          "reply_to": "m01",
+          "text": "That's fixed now.",
+          "gold": {
+            "theme": "access",
+            "episode": "access-1",
+            "state": "resolved"
+          }
+        },
+        {
+          "id": "m07",
+          "timestamp": "2026-10-01T09:07:00Z",
+          "thread": "billing",
+          "reply_to": "m02",
+          "text": "That one remains blocked.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m08",
+          "timestamp": "2026-10-01T09:08:00Z",
+          "thread": "billing",
+          "reply_to": "m07",
+          "text": "It went through this time.",
+          "gold": {
+            "theme": "invoice",
+            "episode": "invoice-1",
+            "state": "resolved"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m04",
+          "relevance": {
+            "access": 2,
+            "invoice": 1
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m07",
+          "relevance": {
+            "access": 0,
+            "invoice": 1,
+            "lunch": 0
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m08",
+          "relevance": {
+            "access": 0,
+            "invoice": 0,
+            "lunch": 0
+          },
+          "important_singletons": []
+        }
+      ],
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m03",
+          "relation": "same_theme",
+          "category": "reference",
+          "why": "Explicit reply target in another thread."
+        },
+        {
+          "a": "m02",
+          "b": "m04",
+          "relation": "same_theme",
+          "category": "reference",
+          "why": "Stopword-only reply still has meaning."
+        },
+        {
+          "a": "m01",
+          "b": "m06",
+          "relation": "same_theme",
+          "category": "reference",
+          "why": "Resolution follows a distracting turn."
+        },
+        {
+          "a": "m02",
+          "b": "m08",
+          "relation": "same_theme",
+          "category": "reference",
+          "why": "Transitive reply chain links payment resolution."
+        },
+        {
+          "a": "m01",
+          "b": "m06",
+          "relation": "state_transition",
+          "category": "state_change",
+          "why": "Reference resolves the access blocker."
+        },
+        {
+          "a": "m02",
+          "b": "m08",
+          "relation": "state_transition",
+          "category": "state_change",
+          "why": "Reference resolves the payment failure."
+        }
+      ]
+    },
+    {
+      "id": "recurring_issue",
+      "purpose": "Keep a stable subject but create a new episode after a verified resolution.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The export worker is dropping every report overnight.",
+          "gold": {
+            "theme": "exports",
+            "episode": "exports-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The export worker is still dropping reports.",
+          "gold": {
+            "theme": "exports",
+            "episode": "exports-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The export worker is fixed and all reports have arrived.",
+          "gold": {
+            "theme": "exports",
+            "episode": "exports-1",
+            "state": "resolved"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch will be at noon on Friday.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-02T09:05:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The export worker is dropping reports again after yesterday's fix.",
+          "gold": {
+            "theme": "exports",
+            "episode": "exports-2",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m06",
+          "timestamp": "2026-10-02T09:06:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The export worker is still dropping reports on the second night.",
+          "gold": {
+            "theme": "exports",
+            "episode": "exports-2",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m07",
+          "timestamp": "2026-10-02T09:07:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch on Friday has a vegetarian option.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m08",
+          "timestamp": "2026-10-02T09:08:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The export worker is fixed again; the missing reports have arrived.",
+          "gold": {
+            "theme": "exports",
+            "episode": "exports-2",
+            "state": "resolved"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m03",
+          "relevance": {
+            "exports": 0
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m06",
+          "relevance": {
+            "exports": 2,
+            "lunch": 0
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m08",
+          "relevance": {
+            "exports": 0,
+            "lunch": 0
+          },
+          "important_singletons": []
+        }
+      ],
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m05",
+          "relation": "same_theme",
+          "category": "recurrence",
+          "why": "The same failure mechanism recurs."
+        },
+        {
+          "a": "m01",
+          "b": "m02",
+          "relation": "same_episode",
+          "category": "recurrence",
+          "why": "Repeated observations do not imply a new incident."
+        },
+        {
+          "a": "m01",
+          "b": "m03",
+          "relation": "same_episode",
+          "category": "recurrence",
+          "why": "Resolution belongs to the initial incident."
+        },
+        {
+          "a": "m03",
+          "b": "m05",
+          "relation": "different_episode",
+          "category": "recurrence",
+          "why": "A new failure after recovery begins a second incident."
+        },
+        {
+          "a": "m05",
+          "b": "m08",
+          "relation": "same_episode",
+          "category": "recurrence",
+          "why": "Second incident and its recovery share an episode."
+        },
+        {
+          "a": "m03",
+          "b": "m05",
+          "relation": "state_transition",
+          "category": "reopening",
+          "why": "Resolved becomes active on recurrence."
+        }
+      ]
+    },
+    {
+      "id": "singleton_critical",
+      "purpose": "A one-time credential leak must outrank abundant routine conversation immediately.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch is at noon in the cafeteria.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch in the cafeteria has vegetarian options.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch in the cafeteria is at noon today.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch in the cafeteria will include sandwiches.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-01T09:05:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The weekly documentation index is updated.",
+          "gold": {
+            "theme": "docs",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m06",
+          "timestamp": "2026-10-01T09:06:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch in the cafeteria starts at noon sharp.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m07",
+          "timestamp": "2026-10-01T09:07:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The weekly documentation index has new links.",
+          "gold": {
+            "theme": "docs",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m08",
+          "timestamp": "2026-10-01T09:08:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "A production signing key was published in a public repository and is still valid.",
+          "gold": {
+            "theme": "key_leak",
+            "episode": "key-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m09",
+          "timestamp": "2026-10-01T09:09:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Team lunch in the cafeteria is ready at noon.",
+          "gold": {
+            "theme": "lunch",
+            "episode": null,
+            "state": "none"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m08",
+          "relevance": {
+            "lunch": 0,
+            "docs": 0,
+            "key_leak": 3
+          },
+          "important_singletons": [
+            "key_leak"
+          ]
+        },
+        {
+          "after": "m09",
+          "relevance": {
+            "lunch": 0,
+            "docs": 0,
+            "key_leak": 3
+          },
+          "important_singletons": [
+            "key_leak"
+          ]
+        }
+      ],
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m08",
+          "relation": "different_theme",
+          "category": "singleton",
+          "why": "Credential exposure differs from routine chatter."
+        }
+      ]
+    },
+    {
+      "id": "state_and_negation",
+      "purpose": "Do not treat hypothetical incidents as real or uncertain recovery as verified resolution.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "If checkout payments fail tomorrow, follow the rollback runbook.",
+          "gold": {
+            "theme": "checkout",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Checkout payments are healthy; no customer transactions have failed.",
+          "gold": {
+            "theme": "checkout",
+            "episode": null,
+            "state": "none"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The build pipeline failed and is blocking the release.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The build pipeline is not fixed; tests are still failing.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-01T09:05:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The build pipeline might be fixed, but recovery has not been verified.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m06",
+          "timestamp": "2026-10-01T09:06:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The build pipeline passed all tests and the release completed.",
+          "gold": {
+            "theme": "build",
+            "episode": "build-1",
+            "state": "resolved"
+          }
+        },
+        {
+          "id": "m07",
+          "timestamp": "2026-10-01T09:07:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Checkout payments are now failing for every customer.",
+          "gold": {
+            "theme": "checkout",
+            "episode": "checkout-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m08",
+          "timestamp": "2026-10-01T09:08:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "Checkout payments recovered; all transactions are succeeding again.",
+          "gold": {
+            "theme": "checkout",
+            "episode": "checkout-1",
+            "state": "resolved"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m02",
+          "relevance": {
+            "checkout": 0
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m05",
+          "relevance": {
+            "checkout": 0,
+            "build": 2
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m07",
+          "relevance": {
+            "checkout": 3,
+            "build": 0
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m08",
+          "relevance": {
+            "checkout": 0,
+            "build": 0
+          },
+          "important_singletons": []
+        }
+      ],
+      "probes": [
+        {
+          "a": "m03",
+          "b": "m04",
+          "relation": "same_theme",
+          "category": "negation",
+          "why": "Negated recovery must retain the issue identity."
+        },
+        {
+          "a": "m03",
+          "b": "m06",
+          "relation": "state_transition",
+          "category": "state_change",
+          "why": "Only verified recovery resolves the build."
+        },
+        {
+          "a": "m02",
+          "b": "m07",
+          "relation": "state_transition",
+          "category": "emergence",
+          "why": "A healthy system later becomes an actual incident."
+        },
+        {
+          "a": "m07",
+          "b": "m08",
+          "relation": "state_transition",
+          "category": "state_change",
+          "why": "Checkout has explicit recovery."
+        }
+      ]
+    },
+    {
+      "id": "similar_vocabulary_distinct_incidents",
+      "purpose": "Separate environments despite almost identical words; a staging recovery cannot resolve production.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "production",
+          "reply_to": null,
+          "text": "Production build pipeline integration tests failed; customer hotfix deployment is blocked.",
+          "gold": {
+            "theme": "production",
+            "episode": "prod-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "staging",
+          "reply_to": null,
+          "text": "Staging build pipeline integration tests failed on the experimental branch.",
+          "gold": {
+            "theme": "staging",
+            "episode": "stage-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "staging",
+          "reply_to": null,
+          "text": "Staging build pipeline integration tests passed after the test fixture update.",
+          "gold": {
+            "theme": "staging",
+            "episode": "stage-1",
+            "state": "resolved"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "production",
+          "reply_to": null,
+          "text": "Production build pipeline integration tests are still failing; customers remain affected.",
+          "gold": {
+            "theme": "production",
+            "episode": "prod-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-01T09:05:00Z",
+          "thread": "staging",
+          "reply_to": null,
+          "text": "Staging build pipeline integration tests passed on another experimental branch run.",
+          "gold": {
+            "theme": "staging",
+            "episode": "stage-1",
+            "state": "resolved"
+          }
+        },
+        {
+          "id": "m06",
+          "timestamp": "2026-10-01T09:06:00Z",
+          "thread": "production",
+          "reply_to": null,
+          "text": "Production build pipeline integration tests failed again during the customer hotfix.",
+          "gold": {
+            "theme": "production",
+            "episode": "prod-1",
+            "state": "active"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m03",
+          "relevance": {
+            "production": 3,
+            "staging": 0
+          },
+          "important_singletons": []
+        },
+        {
+          "after": "m06",
+          "relevance": {
+            "production": 3,
+            "staging": 0
+          },
+          "important_singletons": []
+        }
+      ],
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m02",
+          "relation": "different_theme",
+          "category": "lexical_collision",
+          "why": "Production and staging have independent incident identities."
+        },
+        {
+          "a": "m01",
+          "b": "m03",
+          "relation": "different_theme",
+          "category": "lexical_collision",
+          "why": "A staging recovery is not production recovery."
+        },
+        {
+          "a": "m01",
+          "b": "m04",
+          "relation": "same_theme",
+          "category": "reference",
+          "why": "Production issue persists across staging updates."
+        },
+        {
+          "a": "m02",
+          "b": "m03",
+          "relation": "state_transition",
+          "category": "state_change",
+          "why": "Only staging is resolved."
+        }
+      ]
+    },
+    {
+      "id": "ambiguous_reference",
+      "purpose": "Do not invent a referent when two active issues and no reply metadata leave it underdetermined.",
+      "messages": [
+        {
+          "id": "m01",
+          "timestamp": "2026-10-01T09:01:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The search endpoint is unavailable for all customers.",
+          "gold": {
+            "theme": "search",
+            "episode": "search-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m02",
+          "timestamp": "2026-10-01T09:02:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The upload endpoint is unavailable for all customers.",
+          "gold": {
+            "theme": "upload",
+            "episode": "upload-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m03",
+          "timestamp": "2026-10-01T09:03:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "That's fixed.",
+          "gold": {
+            "theme": "ambiguous",
+            "episode": null,
+            "state": "unknown"
+          }
+        },
+        {
+          "id": "m04",
+          "timestamp": "2026-10-01T09:04:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The search endpoint remains unavailable for all customers.",
+          "gold": {
+            "theme": "search",
+            "episode": "search-1",
+            "state": "active"
+          }
+        },
+        {
+          "id": "m05",
+          "timestamp": "2026-10-01T09:05:00Z",
+          "thread": "main",
+          "reply_to": null,
+          "text": "The upload endpoint remains unavailable for all customers.",
+          "gold": {
+            "theme": "upload",
+            "episode": "upload-1",
+            "state": "active"
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "after": "m03",
+          "relevance": {
+            "search": 3,
+            "upload": 3,
+            "ambiguous": 0
+          },
+          "important_singletons": []
+        }
+      ],
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m03",
+          "relation": "different_theme",
+          "category": "ambiguous_reference",
+          "why": "No evidence identifies which issue the reply resolves."
+        },
+        {
+          "a": "m02",
+          "b": "m03",
+          "relation": "different_theme",
+          "category": "ambiguous_reference",
+          "why": "Abstention is the ground truth for an ambiguous reply."
+        },
+        {
+          "a": "m01",
+          "b": "m04",
+          "relation": "same_theme",
+          "category": "reference",
+          "why": "Search remains active."
+        },
+        {
+          "a": "m02",
+          "b": "m05",
+          "relation": "same_theme",
+          "category": "reference",
+          "why": "Upload remains active."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2279 @@
+{
+  "adapter": "river_frequency_r0.6",
+  "aggregate": {
+    "checkpoint_state_accuracy": 0.0,
+    "checkpoint_state_coverage": 0.0,
+    "current_issue_state_accuracy": 0.0,
+    "current_issue_state_coverage": 0.0,
+    "episode_pair_f1_macro": 0.0,
+    "final_state_accuracy": 0.0,
+    "final_state_coverage": 0.0,
+    "important_singletons": 2,
+    "ndcg_at_3_macro": 0.6938365971163692,
+    "nonzero_relevance_checkpoints": 13,
+    "probes": {
+      "ambiguous_reference": {
+        "passed": 2,
+        "total": 2
+      },
+      "emergence": {
+        "passed": 0,
+        "total": 1
+      },
+      "lexical_collision": {
+        "passed": 1,
+        "total": 3
+      },
+      "negation": {
+        "passed": 1,
+        "total": 1
+      },
+      "paraphrase": {
+        "passed": 0,
+        "total": 4
+      },
+      "recurrence": {
+        "passed": 1,
+        "total": 5
+      },
+      "reference": {
+        "passed": 3,
+        "total": 7
+      },
+      "reopening": {
+        "passed": 0,
+        "total": 1
+      },
+      "singleton": {
+        "passed": 1,
+        "total": 1
+      },
+      "state_change": {
+        "passed": 0,
+        "total": 7
+      },
+      "state_continuity": {
+        "passed": 2,
+        "total": 2
+      }
+    },
+    "singleton_hits_at_1": 0,
+    "theme_pair_f1_macro": 0.6339285714285714
+  },
+  "scenarios": [
+    {
+      "checkpoints": [
+        {
+          "after": "m09",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 0.9514426589871553,
+            "ranking": [
+              {
+                "credited_gain": 3.0,
+                "dominant_gold_theme": "access",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 3,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 1.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 3,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 3.0,
+                "dominant_gold_theme": "build",
+                "purity": 1.0,
+                "rank": 3,
+                "score": 3,
+                "theme_id": "2"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": true
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 9
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 9
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 9
+          }
+        },
+        {
+          "after": "m12",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 1.0,
+            "ranking": [
+              {
+                "credited_gain": 3.0,
+                "dominant_gold_theme": "access",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 4,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 4,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "build",
+                "purity": 1.0,
+                "rank": 3,
+                "score": 4,
+                "theme_id": "2"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": true
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 10
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 12
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 18
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": 0.0,
+        "fn": 18,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "id": "original_sample",
+      "messages": 12,
+      "probes": [
+        {
+          "a": "m02",
+          "b": "m11",
+          "category": "state_continuity",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m11",
+            "state": null,
+            "theme_id": "1"
+          },
+          "relation": "same_theme",
+          "why": "Invoice failure and success concern the same payment."
+        },
+        {
+          "a": "m03",
+          "b": "m12",
+          "category": "state_continuity",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "2"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m12",
+            "state": null,
+            "theme_id": "2"
+          },
+          "relation": "same_theme",
+          "why": "Build failure and success concern the same pipeline."
+        },
+        {
+          "a": "m02",
+          "b": "m11",
+          "category": "state_change",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m11",
+            "state": null,
+            "theme_id": "1"
+          },
+          "relation": "state_transition",
+          "why": "The payment is explicitly resolved."
+        },
+        {
+          "a": "m03",
+          "b": "m12",
+          "category": "state_change",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "2"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m12",
+            "state": null,
+            "theme_id": "2"
+          },
+          "relation": "state_transition",
+          "why": "The pipeline is explicitly resolved."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 10
+          },
+          "resolved": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 12
+      },
+      "theme_coverage": 1.0,
+      "theme_pairs": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 18
+      }
+    },
+    {
+      "checkpoints": [
+        {
+          "after": "m08",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 1.0,
+            "ranking": [
+              {
+                "credited_gain": 7.0,
+                "dominant_gold_theme": "checkout",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 1,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 1.0,
+                "dominant_gold_theme": "printer",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 1,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "checkout",
+                "purity": 1.0,
+                "rank": 3,
+                "score": 1,
+                "theme_id": "2"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "printer",
+                "purity": 1.0,
+                "rank": 4,
+                "score": 1,
+                "theme_id": "3"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "checkout",
+                "purity": 1.0,
+                "rank": 5,
+                "score": 1,
+                "theme_id": "4"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "printer",
+                "purity": 1.0,
+                "rank": 6,
+                "score": 1,
+                "theme_id": "5"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "library",
+                "purity": 1.0,
+                "rank": 7,
+                "score": 1,
+                "theme_id": "6"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "library",
+                "purity": 1.0,
+                "rank": 8,
+                "score": 1,
+                "theme_id": "7"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": true
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 6
+              },
+              "none": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 8
+          },
+          "theme_pairs": {
+            "f1": 0.0,
+            "fn": 7,
+            "fp": 0,
+            "precision": null,
+            "recall": 0.0,
+            "tp": 0
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": 0.0,
+        "fn": 6,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "id": "semantic_paraphrases",
+      "messages": 8,
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m03",
+          "category": "paraphrase",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "2"
+          },
+          "relation": "same_theme",
+          "why": "Same customer-facing purchase failure."
+        },
+        {
+          "a": "m01",
+          "b": "m05",
+          "category": "paraphrase",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "4"
+          },
+          "relation": "same_theme",
+          "why": "Transaction processor and payment gateway refer to the same outage."
+        },
+        {
+          "a": "m02",
+          "b": "m04",
+          "category": "paraphrase",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "3"
+          },
+          "relation": "same_theme",
+          "why": "Printer consumables expressed indirectly."
+        },
+        {
+          "a": "m02",
+          "b": "m06",
+          "category": "paraphrase",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "5"
+          },
+          "relation": "same_theme",
+          "why": "Hard copies and printer describe the same device."
+        },
+        {
+          "a": "m01",
+          "b": "m07",
+          "category": "lexical_collision",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "6"
+          },
+          "relation": "different_theme",
+          "why": "Retail checkout and checking out books differ."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 6
+          },
+          "none": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 8
+      },
+      "theme_coverage": 1.0,
+      "theme_pairs": {
+        "f1": 0.0,
+        "fn": 7,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      }
+    },
+    {
+      "checkpoints": [
+        {
+          "after": "m04",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 1.0,
+            "ranking": [
+              {
+                "credited_gain": 3.0,
+                "dominant_gold_theme": "access",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 1,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 1.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 1,
+                "theme_id": "1"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": true
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 4
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 4
+          },
+          "theme_pairs": {
+            "f1": 0.0,
+            "fn": 2,
+            "fp": 0,
+            "precision": null,
+            "recall": 0.0,
+            "tp": 0
+          }
+        },
+        {
+          "after": "m07",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 0.6309297535714575,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "access",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 1,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 1.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 1,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "lunch",
+                "purity": 1.0,
+                "rank": 3,
+                "score": 1,
+                "theme_id": "2"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "access",
+                "purity": 1.0,
+                "rank": 4,
+                "score": 1,
+                "theme_id": "3"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 5,
+                "score": 1,
+                "theme_id": "4"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": true
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 5
+              },
+              "none": {
+                "correct": 0,
+                "total": 1
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 7
+          },
+          "theme_pairs": {
+            "f1": 0.0,
+            "fn": 6,
+            "fp": 0,
+            "precision": null,
+            "recall": 0.0,
+            "tp": 0
+          }
+        },
+        {
+          "after": "m08",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": null,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "access",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 1,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 1,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "lunch",
+                "purity": 1.0,
+                "rank": 3,
+                "score": 1,
+                "theme_id": "2"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "access",
+                "purity": 1.0,
+                "rank": 4,
+                "score": 1,
+                "theme_id": "3"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 5,
+                "score": 1,
+                "theme_id": "4"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "invoice",
+                "purity": 1.0,
+                "rank": 6,
+                "score": 1,
+                "theme_id": "5"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": true
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 5
+              },
+              "none": {
+                "correct": 0,
+                "total": 1
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 8
+          },
+          "theme_pairs": {
+            "f1": 0.0,
+            "fn": 9,
+            "fp": 0,
+            "precision": null,
+            "recall": 0.0,
+            "tp": 0
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": 0.0,
+        "fn": 9,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "id": "conversational_references",
+      "messages": 8,
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m03",
+          "category": "reference",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": null
+          },
+          "relation": "same_theme",
+          "why": "Explicit reply target in another thread."
+        },
+        {
+          "a": "m02",
+          "b": "m04",
+          "category": "reference",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": null
+          },
+          "relation": "same_theme",
+          "why": "Stopword-only reply still has meaning."
+        },
+        {
+          "a": "m01",
+          "b": "m06",
+          "category": "reference",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "3"
+          },
+          "relation": "same_theme",
+          "why": "Resolution follows a distracting turn."
+        },
+        {
+          "a": "m02",
+          "b": "m08",
+          "category": "reference",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "5"
+          },
+          "relation": "same_theme",
+          "why": "Transitive reply chain links payment resolution."
+        },
+        {
+          "a": "m01",
+          "b": "m06",
+          "category": "state_change",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "3"
+          },
+          "relation": "state_transition",
+          "why": "Reference resolves the access blocker."
+        },
+        {
+          "a": "m02",
+          "b": "m08",
+          "category": "state_change",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "5"
+          },
+          "relation": "state_transition",
+          "why": "Reference resolves the payment failure."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 5
+          },
+          "none": {
+            "correct": 0,
+            "total": 1
+          },
+          "resolved": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 8
+      },
+      "theme_coverage": 0.75,
+      "theme_pairs": {
+        "f1": 0.0,
+        "fn": 9,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      }
+    },
+    {
+      "checkpoints": [
+        {
+          "after": "m03",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 1
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": null,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "exports",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 3,
+                "theme_id": "0"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 2
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 3
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 3
+          }
+        },
+        {
+          "after": "m06",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 1.0,
+            "ranking": [
+              {
+                "credited_gain": 3.0,
+                "dominant_gold_theme": "exports",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 5,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "lunch",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 1,
+                "theme_id": "1"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 4
+              },
+              "none": {
+                "correct": 0,
+                "total": 1
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 6
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 10
+          }
+        },
+        {
+          "after": "m08",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": null,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "exports",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 6,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "lunch",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 2,
+                "theme_id": "1"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 4
+              },
+              "none": {
+                "correct": 0,
+                "total": 2
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 8
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 16
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": 0.0,
+        "fn": 6,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "id": "recurring_issue",
+      "messages": 8,
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m05",
+          "category": "recurrence",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "same_theme",
+          "why": "The same failure mechanism recurs."
+        },
+        {
+          "a": "m01",
+          "b": "m02",
+          "category": "recurrence",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "same_episode",
+          "why": "Repeated observations do not imply a new incident."
+        },
+        {
+          "a": "m01",
+          "b": "m03",
+          "category": "recurrence",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "same_episode",
+          "why": "Resolution belongs to the initial incident."
+        },
+        {
+          "a": "m03",
+          "b": "m05",
+          "category": "recurrence",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "different_episode",
+          "why": "A new failure after recovery begins a second incident."
+        },
+        {
+          "a": "m05",
+          "b": "m08",
+          "category": "recurrence",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "same_episode",
+          "why": "Second incident and its recovery share an episode."
+        },
+        {
+          "a": "m03",
+          "b": "m05",
+          "category": "reopening",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "state_transition",
+          "why": "Resolved becomes active on recurrence."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 4
+          },
+          "none": {
+            "correct": 0,
+            "total": 2
+          },
+          "resolved": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 8
+      },
+      "theme_coverage": 1.0,
+      "theme_pairs": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 16
+      }
+    },
+    {
+      "checkpoints": [
+        {
+          "after": "m08",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 1,
+            "ndcg_at_3": 0.5,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "lunch",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 5,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "docs",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 2,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 7.0,
+                "dominant_gold_theme": "key_leak",
+                "purity": 1.0,
+                "rank": 3,
+                "score": 1,
+                "theme_id": "2"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 1
+              },
+              "none": {
+                "correct": 0,
+                "total": 7
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 8
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 11
+          }
+        },
+        {
+          "after": "m09",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 1,
+            "ndcg_at_3": 0.5,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "lunch",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 6,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "docs",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 2,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 7.0,
+                "dominant_gold_theme": "key_leak",
+                "purity": 1.0,
+                "rank": 3,
+                "score": 1,
+                "theme_id": "2"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 1
+              },
+              "none": {
+                "correct": 0,
+                "total": 8
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 9
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 16
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": null,
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tp": 0
+      },
+      "id": "singleton_critical",
+      "messages": 9,
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m08",
+          "category": "singleton",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "2"
+          },
+          "relation": "different_theme",
+          "why": "Credential exposure differs from routine chatter."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 1
+          },
+          "none": {
+            "correct": 0,
+            "total": 8
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 9
+      },
+      "theme_coverage": 1.0,
+      "theme_pairs": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 16
+      }
+    },
+    {
+      "checkpoints": [
+        {
+          "after": "m02",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 1
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": null,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "checkout",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 2,
+                "theme_id": "0"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "none": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 2
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 1
+          }
+        },
+        {
+          "after": "m05",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 1.0,
+            "ranking": [
+              {
+                "credited_gain": 3.0,
+                "dominant_gold_theme": "build",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 3,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "checkout",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 2,
+                "theme_id": "0"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 3
+              },
+              "none": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 5
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 4
+          }
+        },
+        {
+          "after": "m07",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 0.6309297535714575,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "build",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 4,
+                "theme_id": "1"
+              },
+              {
+                "credited_gain": 7.0,
+                "dominant_gold_theme": "checkout",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 3,
+                "theme_id": "0"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 4
+              },
+              "none": {
+                "correct": 0,
+                "total": 2
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 7
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 9
+          }
+        },
+        {
+          "after": "m08",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": null,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "checkout",
+                "purity": 1.0,
+                "rank": 1,
+                "score": 4,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "build",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 4,
+                "theme_id": "1"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": true
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 4
+              },
+              "none": {
+                "correct": 0,
+                "total": 2
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 8
+          },
+          "theme_pairs": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "tp": 12
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": 0.0,
+        "fn": 7,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "id": "state_and_negation",
+      "messages": 8,
+      "probes": [
+        {
+          "a": "m03",
+          "b": "m04",
+          "category": "negation",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "1"
+          },
+          "relation": "same_theme",
+          "why": "Negated recovery must retain the issue identity."
+        },
+        {
+          "a": "m03",
+          "b": "m06",
+          "category": "state_change",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "1"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "1"
+          },
+          "relation": "state_transition",
+          "why": "Only verified recovery resolves the build."
+        },
+        {
+          "a": "m02",
+          "b": "m07",
+          "category": "emergence",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "state_transition",
+          "why": "A healthy system later becomes an actual incident."
+        },
+        {
+          "a": "m07",
+          "b": "m08",
+          "category": "state_change",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "state_transition",
+          "why": "Checkout has explicit recovery."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 4
+          },
+          "none": {
+            "correct": 0,
+            "total": 2
+          },
+          "resolved": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 8
+      },
+      "theme_coverage": 1.0,
+      "theme_pairs": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 12
+      }
+    },
+    {
+      "checkpoints": [
+        {
+          "after": "m03",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 0.0,
+            "ranking": [
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "staging",
+                "purity": 0.6666666666666666,
+                "rank": 1,
+                "score": 3,
+                "theme_id": "0"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 2
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 3
+          },
+          "theme_pairs": {
+            "f1": 0.5,
+            "fn": 0,
+            "fp": 2,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "tp": 1
+          }
+        },
+        {
+          "after": "m06",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 2
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 0.5,
+            "ranking": [
+              {
+                "credited_gain": 3.5,
+                "dominant_gold_theme": "production",
+                "purity": 0.5,
+                "rank": 1,
+                "score": 6,
+                "theme_id": "0"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 4
+              },
+              "resolved": {
+                "correct": 0,
+                "total": 2
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 6
+          },
+          "theme_pairs": {
+            "f1": 0.5714285714285714,
+            "fn": 0,
+            "fp": 9,
+            "precision": 0.4,
+            "recall": 1.0,
+            "tp": 6
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": 0.0,
+        "fn": 6,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "id": "similar_vocabulary_distinct_incidents",
+      "messages": 6,
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m02",
+          "category": "lexical_collision",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "different_theme",
+          "why": "Production and staging have independent incident identities."
+        },
+        {
+          "a": "m01",
+          "b": "m03",
+          "category": "lexical_collision",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "different_theme",
+          "why": "A staging recovery is not production recovery."
+        },
+        {
+          "a": "m01",
+          "b": "m04",
+          "category": "reference",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "same_theme",
+          "why": "Production issue persists across staging updates."
+        },
+        {
+          "a": "m02",
+          "b": "m03",
+          "category": "state_change",
+          "passed": false,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "state_transition",
+          "why": "Only staging is resolved."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 4
+          },
+          "resolved": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 6
+      },
+      "theme_coverage": 1.0,
+      "theme_pairs": {
+        "f1": 0.5714285714285714,
+        "fn": 0,
+        "fp": 9,
+        "precision": 0.4,
+        "recall": 1.0,
+        "tp": 6
+      }
+    },
+    {
+      "checkpoints": [
+        {
+          "after": "m03",
+          "current_states": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "total": 3
+          },
+          "ranking": {
+            "important_singletons": 0,
+            "ndcg_at_3": 0.3065735963827292,
+            "ranking": [
+              {
+                "credited_gain": 3.5,
+                "dominant_gold_theme": "search",
+                "purity": 0.5,
+                "rank": 1,
+                "score": 2,
+                "theme_id": "0"
+              },
+              {
+                "credited_gain": 0.0,
+                "dominant_gold_theme": "ambiguous",
+                "purity": 1.0,
+                "rank": 2,
+                "score": 1,
+                "theme_id": "1"
+              }
+            ],
+            "singleton_hits_at_1": 0,
+            "tied_scores": false
+          },
+          "states": {
+            "accuracy": 0.0,
+            "accuracy_when_supported": null,
+            "by_class": {
+              "active": {
+                "correct": 0,
+                "total": 2
+              },
+              "unknown": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct": 0,
+            "coverage": 0.0,
+            "total": 3
+          },
+          "theme_pairs": {
+            "f1": 0.0,
+            "fn": 0,
+            "fp": 1,
+            "precision": 0.0,
+            "recall": null,
+            "tp": 0
+          }
+        }
+      ],
+      "episode_coverage": 0.0,
+      "episode_pairs": {
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0
+      },
+      "id": "ambiguous_reference",
+      "messages": 5,
+      "probes": [
+        {
+          "a": "m01",
+          "b": "m03",
+          "category": "ambiguous_reference",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "1"
+          },
+          "relation": "different_theme",
+          "why": "No evidence identifies which issue the reply resolves."
+        },
+        {
+          "a": "m02",
+          "b": "m03",
+          "category": "ambiguous_reference",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "1"
+          },
+          "relation": "different_theme",
+          "why": "Abstention is the ground truth for an ambiguous reply."
+        },
+        {
+          "a": "m01",
+          "b": "m04",
+          "category": "reference",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "same_theme",
+          "why": "Search remains active."
+        },
+        {
+          "a": "m02",
+          "b": "m05",
+          "category": "reference",
+          "passed": true,
+          "predicted_a": {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          "predicted_b": {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          },
+          "relation": "same_theme",
+          "why": "Upload remains active."
+        }
+      ],
+      "states": {
+        "accuracy": 0.0,
+        "accuracy_when_supported": null,
+        "by_class": {
+          "active": {
+            "correct": 0,
+            "total": 4
+          },
+          "unknown": {
+            "correct": 0,
+            "total": 1
+          }
+        },
+        "correct": 0,
+        "coverage": 0.0,
+        "total": 5
+      },
+      "theme_coverage": 1.0,
+      "theme_pairs": {
+        "f1": 0.5,
+        "fn": 0,
+        "fp": 4,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "tp": 2
+      }
+    }
+  ]
+}
