@@ -1,0 +1,1750 @@
+{
+  "adapter": "river_frequency_r0.6",
+  "capabilities": {
+    "episode": false,
+    "salience": "frequency_proxy",
+    "state": false,
+    "theme": true
+  },
+  "scenarios": {
+    "ambiguous_reference": {
+      "checkpoints": {
+        "m03": {
+          "current_states": {
+            "0": null,
+            "1": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "1"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 2,
+              "theme_id": "0"
+            },
+            {
+              "score": 1,
+              "theme_id": "1"
+            }
+          ],
+          "skipped_message_ids": []
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null,
+          "1": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 4,
+            "theme_id": "0"
+          },
+          {
+            "score": 1,
+            "theme_id": "1"
+          }
+        ],
+        "skipped_message_ids": []
+      }
+    },
+    "conversational_references": {
+      "checkpoints": {
+        "m04": {
+          "current_states": {
+            "0": null,
+            "1": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": null
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": null
+            }
+          ],
+          "ranking": [
+            {
+              "score": 1,
+              "theme_id": "0"
+            },
+            {
+              "score": 1,
+              "theme_id": "1"
+            }
+          ],
+          "skipped_message_ids": [
+            "m03",
+            "m04"
+          ]
+        },
+        "m07": {
+          "current_states": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": null
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": null
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "3"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "4"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 1,
+              "theme_id": "0"
+            },
+            {
+              "score": 1,
+              "theme_id": "1"
+            },
+            {
+              "score": 1,
+              "theme_id": "2"
+            },
+            {
+              "score": 1,
+              "theme_id": "3"
+            },
+            {
+              "score": 1,
+              "theme_id": "4"
+            }
+          ],
+          "skipped_message_ids": [
+            "m03",
+            "m04"
+          ]
+        },
+        "m08": {
+          "current_states": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": null
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": null
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "3"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "4"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "5"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 1,
+              "theme_id": "0"
+            },
+            {
+              "score": 1,
+              "theme_id": "1"
+            },
+            {
+              "score": 1,
+              "theme_id": "2"
+            },
+            {
+              "score": 1,
+              "theme_id": "3"
+            },
+            {
+              "score": 1,
+              "theme_id": "4"
+            },
+            {
+              "score": 1,
+              "theme_id": "5"
+            }
+          ],
+          "skipped_message_ids": [
+            "m03",
+            "m04"
+          ]
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": null
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": null
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "2"
+          },
+          {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "3"
+          },
+          {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "4"
+          },
+          {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "5"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 1,
+            "theme_id": "0"
+          },
+          {
+            "score": 1,
+            "theme_id": "1"
+          },
+          {
+            "score": 1,
+            "theme_id": "2"
+          },
+          {
+            "score": 1,
+            "theme_id": "3"
+          },
+          {
+            "score": 1,
+            "theme_id": "4"
+          },
+          {
+            "score": 1,
+            "theme_id": "5"
+          }
+        ],
+        "skipped_message_ids": [
+          "m03",
+          "m04"
+        ]
+      }
+    },
+    "original_sample": {
+      "checkpoints": {
+        "m09": {
+          "current_states": {
+            "0": null,
+            "1": null,
+            "2": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m09",
+              "state": null,
+              "theme_id": "2"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 3,
+              "theme_id": "0"
+            },
+            {
+              "score": 3,
+              "theme_id": "1"
+            },
+            {
+              "score": 3,
+              "theme_id": "2"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m12": {
+          "current_states": {
+            "0": null,
+            "1": null,
+            "2": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m09",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m10",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m11",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m12",
+              "state": null,
+              "theme_id": "2"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 4,
+              "theme_id": "0"
+            },
+            {
+              "score": 4,
+              "theme_id": "1"
+            },
+            {
+              "score": 4,
+              "theme_id": "2"
+            }
+          ],
+          "skipped_message_ids": []
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null,
+          "1": null,
+          "2": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "2"
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "2"
+          },
+          {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m09",
+            "state": null,
+            "theme_id": "2"
+          },
+          {
+            "episode_id": null,
+            "id": "m10",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m11",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m12",
+            "state": null,
+            "theme_id": "2"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 4,
+            "theme_id": "0"
+          },
+          {
+            "score": 4,
+            "theme_id": "1"
+          },
+          {
+            "score": 4,
+            "theme_id": "2"
+          }
+        ],
+        "skipped_message_ids": []
+      }
+    },
+    "recurring_issue": {
+      "checkpoints": {
+        "m03": {
+          "current_states": {
+            "0": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 3,
+              "theme_id": "0"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m06": {
+          "current_states": {
+            "0": null,
+            "1": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 5,
+              "theme_id": "0"
+            },
+            {
+              "score": 1,
+              "theme_id": "1"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m08": {
+          "current_states": {
+            "0": null,
+            "1": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 6,
+              "theme_id": "0"
+            },
+            {
+              "score": 2,
+              "theme_id": "1"
+            }
+          ],
+          "skipped_message_ids": []
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null,
+          "1": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "0"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 6,
+            "theme_id": "0"
+          },
+          {
+            "score": 2,
+            "theme_id": "1"
+          }
+        ],
+        "skipped_message_ids": []
+      }
+    },
+    "semantic_paraphrases": {
+      "checkpoints": {
+        "m08": {
+          "current_states": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "3"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "4"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "5"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "6"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "7"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 1,
+              "theme_id": "0"
+            },
+            {
+              "score": 1,
+              "theme_id": "1"
+            },
+            {
+              "score": 1,
+              "theme_id": "2"
+            },
+            {
+              "score": 1,
+              "theme_id": "3"
+            },
+            {
+              "score": 1,
+              "theme_id": "4"
+            },
+            {
+              "score": 1,
+              "theme_id": "5"
+            },
+            {
+              "score": 1,
+              "theme_id": "6"
+            },
+            {
+              "score": 1,
+              "theme_id": "7"
+            }
+          ],
+          "skipped_message_ids": []
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "6": null,
+          "7": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "2"
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "3"
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "4"
+          },
+          {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "5"
+          },
+          {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "6"
+          },
+          {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "7"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 1,
+            "theme_id": "0"
+          },
+          {
+            "score": 1,
+            "theme_id": "1"
+          },
+          {
+            "score": 1,
+            "theme_id": "2"
+          },
+          {
+            "score": 1,
+            "theme_id": "3"
+          },
+          {
+            "score": 1,
+            "theme_id": "4"
+          },
+          {
+            "score": 1,
+            "theme_id": "5"
+          },
+          {
+            "score": 1,
+            "theme_id": "6"
+          },
+          {
+            "score": 1,
+            "theme_id": "7"
+          }
+        ],
+        "skipped_message_ids": []
+      }
+    },
+    "similar_vocabulary_distinct_incidents": {
+      "checkpoints": {
+        "m03": {
+          "current_states": {
+            "0": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 3,
+              "theme_id": "0"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m06": {
+          "current_states": {
+            "0": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 6,
+              "theme_id": "0"
+            }
+          ],
+          "skipped_message_ids": []
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "0"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 6,
+            "theme_id": "0"
+          }
+        ],
+        "skipped_message_ids": []
+      }
+    },
+    "singleton_critical": {
+      "checkpoints": {
+        "m08": {
+          "current_states": {
+            "0": null,
+            "1": null,
+            "2": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "2"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 5,
+              "theme_id": "0"
+            },
+            {
+              "score": 2,
+              "theme_id": "1"
+            },
+            {
+              "score": 1,
+              "theme_id": "2"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m09": {
+          "current_states": {
+            "0": null,
+            "1": null,
+            "2": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "2"
+            },
+            {
+              "episode_id": null,
+              "id": "m09",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 6,
+              "theme_id": "0"
+            },
+            {
+              "score": 2,
+              "theme_id": "1"
+            },
+            {
+              "score": 1,
+              "theme_id": "2"
+            }
+          ],
+          "skipped_message_ids": []
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null,
+          "1": null,
+          "2": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "2"
+          },
+          {
+            "episode_id": null,
+            "id": "m09",
+            "state": null,
+            "theme_id": "0"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 6,
+            "theme_id": "0"
+          },
+          {
+            "score": 2,
+            "theme_id": "1"
+          },
+          {
+            "score": 1,
+            "theme_id": "2"
+          }
+        ],
+        "skipped_message_ids": []
+      }
+    },
+    "state_and_negation": {
+      "checkpoints": {
+        "m02": {
+          "current_states": {
+            "0": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 2,
+              "theme_id": "0"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m05": {
+          "current_states": {
+            "0": null,
+            "1": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "1"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 3,
+              "theme_id": "1"
+            },
+            {
+              "score": 2,
+              "theme_id": "0"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m07": {
+          "current_states": {
+            "0": null,
+            "1": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 4,
+              "theme_id": "1"
+            },
+            {
+              "score": 3,
+              "theme_id": "0"
+            }
+          ],
+          "skipped_message_ids": []
+        },
+        "m08": {
+          "current_states": {
+            "0": null,
+            "1": null
+          },
+          "messages": [
+            {
+              "episode_id": null,
+              "id": "m01",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m02",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m03",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m04",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m05",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m06",
+              "state": null,
+              "theme_id": "1"
+            },
+            {
+              "episode_id": null,
+              "id": "m07",
+              "state": null,
+              "theme_id": "0"
+            },
+            {
+              "episode_id": null,
+              "id": "m08",
+              "state": null,
+              "theme_id": "0"
+            }
+          ],
+          "ranking": [
+            {
+              "score": 4,
+              "theme_id": "0"
+            },
+            {
+              "score": 4,
+              "theme_id": "1"
+            }
+          ],
+          "skipped_message_ids": []
+        }
+      },
+      "final": {
+        "current_states": {
+          "0": null,
+          "1": null
+        },
+        "messages": [
+          {
+            "episode_id": null,
+            "id": "m01",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m02",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m03",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m04",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m05",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m06",
+            "state": null,
+            "theme_id": "1"
+          },
+          {
+            "episode_id": null,
+            "id": "m07",
+            "state": null,
+            "theme_id": "0"
+          },
+          {
+            "episode_id": null,
+            "id": "m08",
+            "state": null,
+            "theme_id": "0"
+          }
+        ],
+        "ranking": [
+          {
+            "score": 4,
+            "theme_id": "0"
+          },
+          {
+            "score": 4,
+            "theme_id": "1"
+          }
+        ],
+        "skipped_message_ids": []
+      }
+    }
+  },
+  "schema_version": 1
+}

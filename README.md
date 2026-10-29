@@ -96,6 +96,32 @@ For a finite replay, cleanup is scheduled beyond the corpus length, term fading 
 
 This is an exploratory file-based harness: it retains input windows and feature dictionaries to write the final report, and starts a fresh model each run. It is not a bounded-memory live-stream service. TextClust's search cost also increases with the number of small clusters, so begin with a modest dataset.
 
+## Contextual evaluation suite
+
+The original clustering baseline is preserved. A separate evaluation suite
+adds 8 labeled scenarios (64 messages) covering semantic paraphrases,
+conversational references, recurring incidents, recovery/reopening,
+similar-vocabulary independent issues, and a one-time critical event.
+
+```bash
+python -m pip install -r requirements-eval.lock
+python -m unittest evaluation.test_evaluation -v
+python -m evaluation.run --out evaluation/runs/baseline
+```
+
+See [evaluation instructions and annotation policy](evaluation/README.md),
+the [recorded baseline report](evaluation/baseline/report.md), and the
+[recommended next architecture experiment](evaluation/ARCHITECTURE.md).
+The runner measures final theme grouping separately from prefix-only
+state and salience checkpoints. Candidate adapters receive text and
+conversation metadata with no gold labels; the baseline code and samples
+are fingerprinted so changes cannot silently replace the comparison.
+
+On this synthetic development suite the baseline has theme-pair macro F1
+0.634, passes 0/4 paraphrase-link probes, and ranks the critical singleton
+first at 0/2 checkpoints. State and episode outputs are unsupported. These
+are diagnostic findings, not real-world accuracy estimates.
+
 ## Sources
 
 - River project and installation: https://pypi.org/project/river/

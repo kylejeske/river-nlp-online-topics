@@ -1,0 +1,11 @@
+{
+  "commit": "7f8691d846cbd102e5a5ad5d279a96fcbca6e1c6",
+  "sha256": {
+    "find_themes.py": "5ea2e11da09f0eb875ac141a0f73105dbf309e3e0879b569bca226bc92d0fb86",
+    "requirements.txt": "b8482b9c807d268c7d35170e135f7ccdc02d925b58e811c36e319510af8745bf",
+    "VERIFICATION.txt": "0e339345d7dae70e8e43d34b7063fb69b8644adac1fce869866dbe6beffc9eba",
+    "sample-data/001-chat.txt": "9d69237c7c51e2ae5031e99786ef9a04c4494fe9dc62081e09d06a7612c03d26",
+    "sample-results/assignments.csv": "841ce85cc483f246bac79f4f5822f4a0321c758cb9432d0d830f4e1225f82935",
+    "sample-results/themes.json": "44d0bdb71f0ed579038dc297706616fc5c8125da6322ed913de6e42d412a53fb"
+  }
+}
